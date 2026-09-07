@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Story - TaleNexa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TALENEXA</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Submit a Story</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+
+<main class="submit-container">
+
+    <div class="submit-box">
+
+        <h1>Submit a Story</h1>
+
+        <p class="submit-subtitle">
+            Share your story with the TaleNexa community
+        </p>
+
+        <form>
+
+            <div class="form-group">
+                <label for="title">Story Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Enter the story title"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input
+                    type="text"
+                    id="author"
+                    name="author"
+                    placeholder="Enter the author name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Write a short description of the story"
+                    rows="5"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cover">Cover Image URL</label>
+                <input
+                    type="url"
+                    id="cover"
+                    name="cover"
+                    placeholder="Paste the cover image URL"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="story_url">Story URL</label>
+                <input
+                    type="url"
+                    id="story_url"
+                    name="story_url"
+                    placeholder="Paste the story link"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-button">
+                SUBMIT STORY
+            </button>
+
+        </form>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 TaleNexa</p>
+</footer>
+
+</body>
+</html>

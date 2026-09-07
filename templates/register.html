@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Create Account - TaleNexa</title>
+				<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+	<body>
+
+		<header>
+			<div class="logo">TALENEXA</div>
+
+			<nav>
+				<a href="/">Home</a>
+				<a href="/submit">Submit a Story</a>
+				<a href="/login">Login</a>
+			</nav>
+		</header>
+
+		<main class="register-page">
+
+			<div class="register-image">
+				<img src="{{ url_for('static', filename='images/register-bg.png') }}" alt="TaleNexa">
+    </div>
+
+			<div class="auth-container">
+
+				<div class="auth-box">
+
+					<h1>Create Account</h1>
+
+					<p class="auth-subtitle">
+						Create an account to manage your stories
+					</p>
+
+					<form method="POST" action="/register">
+
+						<div class="form-group">
+							<label for="username">Username</label>
+							<input
+								type="text"
+								id="username"
+								name="username"
+								placeholder="Enter your username"
+								required=""
+                    >
+							</div>
+
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="Enter your email"
+								required=""
+                    >
+							</div>
+
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input
+								type="password"
+								id="password"
+								name="password"
+								placeholder="Create a password"
+								required=""
+                    >
+							</div>
+
+						<div class="form-group">
+							<label for="confirm_password">Confirm Password</label>
+							<input
+								type="password"
+								id="confirm_password"
+								name="confirm_password"
+								placeholder="Confirm your password"
+								required=""
+                    >
+							</div>
+
+						<button type="submit" class="login-button">
+							CREATE ACCOUNT
+						</button>
+
+					</form>
+
+					<p class="register-text">
+						Already have an account?
+						<a href="/login">Login</a>
+					</p>
+
+				</div>
+
+			</div>
+
+		</main>
+
+		<footer>
+			<p>© 2026 TaleNexa</p>
+		</footer>
+
+	</body>
+</html>
