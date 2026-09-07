@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Story</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TaleNexa</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+	</head>
 
-<header>
-    <div class="logo">AI STORY</div>
+	<body>
 
-    <nav>
-        <a href="/">Trang chủ</a>
-        <a href="#">Đăng truyện</a>
-        <a href="#">Đăng nhập</a>
-    </nav>
-</header>
+		<header>
+			<div class="logo">TALENEXA</div>
 
-<main>
+			<nav>
+				<a href="/">Home</a>
+				<a href="#">Submit a Story</a>
+				<a href="/login">Login</a>
+			</nav>
+		</header>
 
-    <section class="hero">
-        <h1>AI Story</h1>
-        <p>Những câu chuyện phía sau những video AI.</p>
-    </section>
+		<main>
 
-    <section class="stories">
-        <h2>Truyện mới nhất</h2>
+			<section class="hero">
+				<h1>TaleNexa</h1>
+				<p>Discover the stories behind the AI videos.</p>
+			</section>
 
-        <div class="story-grid">
+			<section class="stories">
+				<h2>Latest Stories</h2>
 
-            <div class="story-card">
-                <div class="cover">ẢNH BÌA</div>
-                <h3>Câu chuyện mẫu</h3>
-                <p>Đây là mô tả ngắn của câu chuyện.</p>
-                <a href="#">Đọc câu chuyện</a>
-            </div>
+				<div class="story-grid">
 
-            <div class="story-card">
-                <div class="cover">ẢNH BÌA</div>
-                <h3>Câu chuyện thứ hai</h3>
-                <p>Một câu chuyện được đăng trên AI Story.</p>
-                <a href="#">Đọc câu chuyện</a>
-            </div>
+					<div class="story-card">
+						<div class="cover">COVER IMAGE</div>
 
-        </div>
-    </section>
+						<h3>Sample Story</h3>
 
-</main>
+						<p>This is a short description of the story.</p>
 
-<footer>
-    <p>© 2026 AI Story</p>
-</footer>
+						<a href="#">Read Story</a>
+					</div>
 
-</body>
+					<div class="story-card">
+						<div class="cover">COVER IMAGE</div>
+
+						<h3>Another Story</h3>
+
+						<p>A story featured on TaleNexa.</p>
+
+						<a href="#">Read Story</a>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+			<p>© 2026 TaleNexa</p>
+		</footer>
+
+	</body>
 </html>
