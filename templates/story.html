@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ story.title if story else "Story - TaleNexa" }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TALENEXA</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/submit">Submit a Story</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+
+<main class="story-page">
+
+    <div class="story-cover">
+        {% if story and story.cover %}
+            <img src="{{ story.cover }}" alt="{{ story.title }}">
+        {% else %}
+            <div class="cover-placeholder">
+                COVER IMAGE
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="story-info">
+
+        <h1>
+            {{ story.title if story else "Story Title" }}
+        </h1>
+
+        <p class="story-author">
+            By:
+            {{ story.author if story else "Author Name" }}
+        </p>
+
+        <p class="story-description">
+            {{ story.description if story else
+               "This is where the story description will appear." }}
+        </p>
+
+        {% if story and story.story_url %}
+            <a href="{{ story.story_url }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="read-story-button">
+                READ STORY
+            </a>
+        {% else %}
+            <button class="read-story-button" disabled>
+                READ STORY
+            </button>
+        {% endif %}
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 TaleNexa</p>
+</footer>
+
+</body>
+</html>

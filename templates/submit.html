@@ -1,36 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit a Story - TaleNexa</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 <body>
-
-<header>
-    <div class="logo">TALENEXA</div>
-
-    <nav>
-        <a href="/">Home</a>
-        <a href="/register">Submit a Story</a>
-        <a href="/login">Login</a>
-    </nav>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="logo">TALENEXA</a>
+        <nav class="main-nav">
+            <a href="/">Home</a>
+            <a href="/submit" class="active">Submit a Story</a>
+            <a href="/login">Login</a>
+        </nav>
+    </div>
 </header>
-
-<main class="submit-container">
-
-    <div class="submit-box">
-
-        <h1>Submit a Story</h1>
-
-        <p class="submit-subtitle">
-            Share your story with the TaleNexa community
+<main class="submit-page">
+    <div class="submit-header">
+        <p class="section-label">TALE NEXA</p>
+        <h1>Submit Your Story</h1>
+        <p>
+            Share the story behind your AI video with the TaleNexa community.
         </p>
-
+    </div>
+    <div class="submit-box">
         <form>
-
             <div class="form-group">
                 <label for="title">Story Title</label>
                 <input
@@ -41,7 +38,6 @@
                     required
                 >
             </div>
-
             <div class="form-group">
                 <label for="author">Author</label>
                 <input
@@ -52,52 +48,49 @@
                     required
                 >
             </div>
-
             <div class="form-group">
                 <label for="description">Description</label>
                 <textarea
                     id="description"
                     name="description"
                     placeholder="Write a short description of the story"
-                    rows="5"
+                    rows="6"
                     required
                 ></textarea>
             </div>
-
             <div class="form-group">
                 <label for="cover">Cover Image URL</label>
                 <input
                     type="url"
                     id="cover"
                     name="cover"
-                    placeholder="Paste the cover image URL"
+                    placeholder="https://example.com/cover.jpg"
                 >
+                <small>
+                    Add a direct URL to the story cover image.
+                </small>
             </div>
-
             <div class="form-group">
                 <label for="story_url">Story URL</label>
                 <input
                     type="url"
                     id="story_url"
                     name="story_url"
-                    placeholder="Paste the story link"
+                    placeholder="https://example.com/your-story"
                     required
                 >
+                <small>
+                    Readers will use this link to read the full story.
+                </small>
             </div>
-
-            <button type="submit" class="login-button">
+            <button type="submit" class="submit-button">
                 SUBMIT STORY
             </button>
-
         </form>
-
     </div>
-
 </main>
-
-<footer>
+<footer class="site-footer">
     <p>© 2026 TaleNexa</p>
 </footer>
-
 </body>
 </html>

@@ -1,64 +1,84 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TaleNexa</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-	</head>
-
-	<body>
-
-		<header>
-			<div class="logo">TALENEXA</div>
-
-			<nav>
-				<a href="/">Home</a>
-				<a href="/submit">Submit a Story</a>
-				<a href="/login">Login</a>
-			</nav>
-		</header>
-
-		<main>
-
-			<section class="hero">
-				<h1>TaleNexa</h1>
-				<p>Discover the stories behind the AI videos.</p>
-			</section>
-
-			<section class="stories">
-				<h2>Latest Stories</h2>
-
-				<div class="story-grid">
-
-					<div class="story-card">
-						<div class="cover">COVER IMAGE</div>
-
-						<h3>Sample Story</h3>
-
-						<p>This is a short description of the story.</p>
-
-						<a href="#">Read Story</a>
-					</div>
-
-					<div class="story-card">
-						<div class="cover">COVER IMAGE</div>
-
-						<h3>Another Story</h3>
-
-						<p>A story featured on TaleNexa.</p>
-
-						<a href="#">Read Story</a>
-					</div>
-
-				</div>
-			</section>
-
-		</main>
-
-		<footer>
-			<p>© 2026 TaleNexa</p>
-		</footer>
-
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaleNexa - AI Stories</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="logo">TALENEXA</a>
+        <nav class="main-nav">
+            <a href="/" class="active">Home</a>
+            <a href="/submit">Submit a Story</a>
+            <a href="/login">Login</a>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">AI STORIES PLATFORM</p>
+            <h1>Discover Stories<br>Behind AI Videos</h1>
+            <p class="hero-description">
+                Explore the stories that inspire the AI videos you see online.
+            </p>
+            <a href="#stories" class="hero-button">
+                EXPLORE STORIES
+            </a>
+        </div>
+    </section>
+    <section class="stories" id="stories">
+        <div class="section-heading">
+            <div>
+                <p class="section-label">EXPLORE</p>
+                <h2>Latest Stories</h2>
+            </div>
+            <span class="story-count">FEATURED</span>
+        </div>
+        <div class="story-grid">
+            <article class="story-card">
+                <div class="cover">
+                    <span>COVER IMAGE</span>
+                </div>
+                <div class="story-card-content">
+                    <p class="story-category">FEATURED STORY</p>
+                    <h3>Sample Story</h3>
+                    <p>
+                        This is a short description of the story.
+                        Discover what happened behind the AI video.
+                    </p>
+                    <a href="#" class="read-button">
+                        Read Story →
+                    </a>
+                </div>
+            </article>
+            <article class="story-card">
+                <div class="cover">
+                    <span>COVER IMAGE</span>
+                </div>
+                <div class="story-card-content">
+                    <p class="story-category">FEATURED STORY</p>
+                    <h3>Another Story</h3>
+                    <p>
+                        A story featured on TaleNexa.
+                        Explore the story behind the video.
+                    </p>
+                    <a href="#" class="read-button">
+                        Read Story →
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="ad-section">
+        <span>ADVERTISEMENT</span>
+    </section>
+</main>
+<footer class="site-footer">
+    <p>© 2026 TaleNexa</p>
+</footer>
+</body>
 </html>
